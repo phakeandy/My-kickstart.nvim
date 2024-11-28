@@ -17,3 +17,11 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('n', 'H', '^', { desc = 'Move to beginning of line' })
 vim.keymap.set('n', 'L', '$', { desc = 'Move to end of line' })
+
+-- Emacs like key binding
+vim.keymap.set('i', '<C-e>', '<C-o>$', { desc = 'Move cursor to the beginning of line' })
+vim.keymap.set('i', '<C-a>', '<C-o>^', { desc = 'Move cursor to the end of line' })
+
+-- Move selected lines up one line
+vim.keymap.set('x', 'K', ':move-2<CR>gv=gv', { desc = 'Move selected lines up one line' })
+vim.keymap.set('x', 'J', ':move+2<CR>gv=gv', { desc = 'Move selected lines down one line' })
